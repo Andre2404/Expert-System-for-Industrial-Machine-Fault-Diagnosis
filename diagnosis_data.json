@@ -1,0 +1,297 @@
+{
+  "Unbalance": {
+    "name": "Unbalance (Ketidakseimbangan)",
+    "description": "Massa tidak merata pada rotor yang berputar menyebabkan gaya sentrifugal",
+    "causes": [
+      "Akumulasi kotoran/debu tidak merata",
+      "Korosi yang tidak simetris",
+      "Kerusakan sudu-sudu/blade damage",
+      "Kesalahan manufacturing/toleransi",
+      "Erosi material selektif",
+      "Assembly error"
+    ],
+    "solutions": [
+      "Lakukan single plane/dynamic balancing",
+      "Bersihkan permukaan rotor thoroughly",
+      "Ganti bagian yang rusak/aus",
+      "Verifikasi toleransi manufacturing",
+      "Check runout dan concentricity",
+      "Pastikan balancing weights terpasang benar"
+    ],
+    "severity": "Sedang-Tinggi",
+    "maintenance_time": "2-8 jam",
+    "risk_level": "Medium-High",
+    "tools_required": ["Balancing machine", "Vibration analyzer", "Tachometer"]
+  },
+  "Misalignment": {
+    "name": "Misalignment (Ketidakselarasan)",
+    "description": "Poros penggerak dan yang digerakkan tidak segaris, menyebabkan gaya bending",
+    "causes": [
+      "Pemasangan tidak presisi",
+      "Foundation settlement",
+      "Thermal expansion tidak dikompensasi",
+      "Bearing wear uneven",
+      "Soft foot condition",
+      "Pipe strain"
+    ],
+    "solutions": [
+      "Lakukan laser alignment precision",
+      "Periksa dan koreksi foundation",
+      "Kompensasi thermal growth",
+      "Ganti bearing yang aus",
+      "Koreksi soft foot",
+      "Eliminate pipe strain"
+    ],
+    "severity": "Sedang",
+    "maintenance_time": "4-12 jam",
+    "risk_level": "Medium",
+    "tools_required": ["Laser alignment tool", "Dial indicator", "Feeler gauge"]
+  },
+  "Mechanical_Looseness": {
+    "name": "Mechanical Looseness (Kelonggaran Mekanis)",
+    "description": "Komponen mekanis longgar menyebabkan impact dan frekuensi harmonik",
+    "causes": [
+      "Baut longgar/tidak sesuai torque",
+      "Keyway wear excessive",
+      "Bearing clearance berlebihan",
+      "Foundation bolts loose",
+      "Structural cracks",
+      "Worn splines/serrations"
+    ],
+    "solutions": [
+      "Tighten semua baut sesuai torque specification",
+      "Periksa dan repair keyway",
+      "Ganti bearing jika clearance excessive",
+      "Periksa dan kencangkan foundation bolts",
+      "Inspect untuk cracks",
+      "Replace worn components"
+    ],
+    "severity": "Rendah-Sedang",
+    "maintenance_time": "1-4 jam",
+    "risk_level": "Low-Medium",
+    "tools_required": ["Torque wrench", "Dial indicator", "Bearing puller"]
+  },
+  "Bent_Shaft": {
+    "name": "Bent Shaft (Poros Bengkok)",
+    "description": "Poros mengalami bending atau defleksi permanent menyebabkan runout",
+    "causes": [
+      "Overload mekanis",
+      "Impact damage/bent",
+      "Thermal stress excessive",
+      "Manufacturing defect",
+      "Improper storage",
+      "Fatigue failure"
+    ],
+    "solutions": [
+      "Straightening poros (jika memungkinkan)",
+      "Ganti poros jika bending parah",
+      "Kurangi beban operasi",
+      "Periksa alignment setelah repair",
+      "Implement overload protection",
+      "Check for thermal stress points"
+    ],
+    "severity": "Tinggi",
+    "maintenance_time": "8-24 jam",
+    "risk_level": "High",
+    "tools_required": ["Dial indicator", "Straight edge", "Press"]
+  },
+  "Bearing_Defect": {
+    "name": "Bearing Defect (Kerusakan Bantalan)",
+    "description": "Kerusakan pada rolling element bearing menyebabkan noise dan vibration",
+    "causes": [
+      "Lubrication failure/inadequate",
+      "Contamination (debu, air, chemical)",
+      "Overload mechanical",
+      "Fatigue material",
+      "Improper installation",
+      "Corrosion"
+    ],
+    "solutions": [
+      "Ganti bearing defective",
+      "Perbaiki sistem lubricasi",
+      "Bersihkan housing thoroughly",
+      "Periksa dan ganti seals",
+      "Verifikasi proper installation",
+      "Implement preventive maintenance"
+    ],
+    "severity": "Tinggi",
+    "maintenance_time": "4-16 jam",
+    "risk_level": "High",
+    "tools_required": ["Bearing puller", "Hydraulic press", "Torque wrench"]
+  },
+  "Resonance": {
+    "name": "Resonance (Resonansi)",
+    "description": "Frekuensi natural sistem bertepatan dengan frekuensi operasi menyebabkan amplifikasi getaran",
+    "causes": [
+      "Natural frequency match operational speed",
+      "Structural stiffness inadequate",
+      "Mass distribution improper",
+      "Support system flexible",
+      "Operating speed change"
+    ],
+    "solutions": [
+      "Ubah operating speed (jika memungkinkan)",
+      "Tambah stiffness structure",
+      "Ubah mass distribution",
+      "Tambah damping system",
+      "Modify support structure",
+      "Lakukan modal analysis"
+    ],
+    "severity": "Tinggi",
+    "maintenance_time": "8-48 jam",
+    "risk_level": "High",
+    "tools_required": ["FFT analyzer", "Modal testing kit", "Strain gauges"]
+  },
+  "Coupling_Problem": {
+    "name": "Coupling Problem (Masalah Kopling)",
+    "description": "Kerusakan atau ketidaksesuaian pada sistem kopling",
+    "causes": [
+      "Coupling wear excessive",
+      "Lubrication failure (gear coupling)",
+      "Misalignment coupling",
+      "Bolt looseness",
+      "Flexible element failure",
+      "Improper coupling selection"
+    ],
+    "solutions": [
+      "Ganti coupling yang rusak",
+      "Lubricate gear coupling",
+      "Koreksi alignment coupling",
+      "Tighten coupling bolts",
+      "Periksa flexible elements",
+      "Select proper coupling type"
+    ],
+    "severity": "Sedang",
+    "maintenance_time": "2-6 jam",
+    "risk_level": "Medium",
+    "tools_required": ["Alignment tools", "Torque wrench", "Dial indicator"]
+  },
+  "Foundation_Problem": {
+    "name": "Foundation Problem (Masalah Fondasi)",
+    "description": "Masalah pada foundation atau baseplate mesin",
+    "causes": [
+      "Foundation cracks",
+      "Anchor bolts loose",
+      "Grout deterioration",
+      "Baseplate distortion",
+      "Settlement uneven",
+      "Structural weakness"
+    ],
+    "solutions": [
+      "Repair foundation cracks",
+      "Tighten anchor bolts",
+      "Regrout baseplate",
+      "Shim baseplate properly",
+      "Level foundation",
+      "Strengthen structure"
+    ],
+    "severity": "Tinggi",
+    "maintenance_time": "8-72 jam",
+    "risk_level": "High",
+    "tools_required": ["Level", "Grout tools", "Torque wrench", "Shims"]
+  },
+  "Rotor_Rub": {
+    "name": "Rotor Rub (Gesekan Rotor)",
+    "description": "Rotor bergesekan dengan stationary parts",
+    "causes": [
+      "Clearance insufficient",
+      "Thermal expansion excessive",
+      "Bearing wear",
+      "Rotor bow",
+      "Foreign object"
+    ],
+    "solutions": [
+      "Adjust clearance sesuai spec",
+      "Monitor thermal growth",
+      "Replace worn bearings",
+      "Check rotor straightness",
+      "Inspect untuk foreign objects"
+    ],
+    "severity": "Tinggi",
+    "maintenance_time": "4-24 jam",
+    "risk_level": "High",
+    "tools_required": ["Bore gauge", "Dial indicator", "Thermal camera"]
+  },
+  "Gear_Problem": {
+    "name": "Gear Problem (Masalah Gear)",
+    "description": "Kerusakan pada sistem gear atau tooth wear",
+    "causes": [
+      "Tooth wear/pitting",
+      "Misalignment gear",
+      "Lubrication inadequate",
+      "Overloading",
+      "Backlash excessive"
+    ],
+    "solutions": [
+      "Inspect gear teeth condition",
+      "Koreksi gear alignment",
+      "Improve lubrication system",
+      "Reduce loading",
+      "Adjust backlash"
+    ],
+    "severity": "Sedang-Tinggi",
+    "maintenance_time": "6-24 jam",
+    "risk_level": "Medium-High",
+    "tools_required": ["Gear inspection tools", "Alignment tools", "Oil analysis kit"]
+  },
+  "Oil_Whirl": {
+    "name": "Oil Whirl (Putaran Oil)",
+    "description": "Instabilitas pada journal bearing akibat oil film",
+    "causes": [
+      "Bearing clearance excessive",
+      "Oil viscosity incorrect",
+      "Load insufficient",
+      "Bearing design issue"
+    ],
+    "solutions": [
+      "Adjust bearing clearance",
+      "Correct oil viscosity",
+      "Increase bearing load",
+      "Modify bearing design"
+    ],
+    "severity": "Sedang",
+    "maintenance_time": "4-12 jam",
+    "risk_level": "Medium",
+    "tools_required": ["Bearing clearance tools", "Oil analysis kit"]
+  },
+  "Cavitation": {
+    "name": "Cavitation (Kavitasi)",
+    "description": "Terbentuk dan collapse-nya vapor bubbles pada pompa",
+    "causes": [
+      "NPSH insufficient",
+      "Pump speed too high",
+      "Impeller damage",
+      "System design issue"
+    ],
+    "solutions": [
+      "Increase NPSH available",
+      "Reduce pump speed",
+      "Repair/replace impeller",
+      "Modify system design"
+    ],
+    "severity": "Sedang-Tinggi",
+    "maintenance_time": "4-16 jam",
+    "risk_level": "Medium-High",
+    "tools_required": ["Pressure gauges", "Flow meter", "Stethoscope"]
+  },
+  "Thrust_Bearing_Failure": {
+    "name": "Thrust Bearing Failure (Kegagalan Bantalan Thrust)",
+    "description": "Kerusakan pada thrust bearing yang menahan beban aksial",
+    "causes": [
+      "Axial overload",
+      "Lubrication failure",
+      "Installation error",
+      "Contamination"
+    ],
+    "solutions": [
+      "Replace thrust bearing",
+      "Correct axial loading",
+      "Improve lubrication",
+      "Verify installation"
+    ],
+    "severity": "Tinggi",
+    "maintenance_time": "6-24 jam",
+    "risk_level": "High",
+    "tools_required": ["Thrust bearing tools", "Dial indicator", "Alignment tools"]
+  }
+}

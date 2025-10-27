@@ -1,0 +1,400 @@
+/* Custom Styles untuk Sistem Pakar */
+
+:root {
+    --primary-color: #ff6b35;
+    --secondary-color: #ff8555;
+    --success-color: #ffa742;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #ffaa66;
+    --card-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+body {
+    background: linear-gradient(135deg, #fff5f0 0%, #ffe5d5 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: rgba(255, 107, 53, 0.2);
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    color: #ff6b35;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-right: 20px;
+}
+
+.back-button:hover {
+    background: rgba(255, 107, 53, 0.3);
+    transform: translateX(-3px);
+    color: #ff6b35;
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-header {
+    font-weight: 600;
+    padding: 1.25rem 1.5rem;
+}
+
+/* Symptoms Grid */
+.symptoms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.symptom-card {
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.symptom-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.2);
+    background: #fff9f5;
+}
+
+.symptom-card.selected {
+    border-color: var(--primary-color);
+    background: linear-gradient(135deg, #fff5f0 0%, #ffe5d5 100%);
+    border-width: 3px;
+    animation: pulse-border 2s ease-in-out infinite;
+}
+
+@keyframes pulse-border {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.4); }
+    50% { box-shadow: 0 0 0 10px rgba(255, 107, 53, 0); }
+}
+
+.symptom-card input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+/* Diagnosis Card */
+.diagnosis-card {
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.diagnosis-header {
+    padding: 1.5rem;
+    color: white;
+    position: relative;
+}
+
+.diagnosis-header.primary { 
+    background: linear-gradient(135deg, #ff6b35 60%, #ff8555 100%);
+    animation: slideInDown 0.5s ease-out;
+}
+.diagnosis-header.secondary { 
+    background: linear-gradient(135deg, #ff8555 60%, #ffaa66 100%);
+    animation: slideInDown 0.6s ease-out;
+}
+.diagnosis-header.success { 
+    background: linear-gradient(135deg, #ffaa66 70%, #ffb377 100%);
+    animation: slideInDown 0.7s ease-out;
+}
+.diagnosis-header.warning { 
+    background: linear-gradient(135deg, #ffb377 60%, #ffc088 100%);
+    animation: slideInDown 0.8s ease-out;
+}
+.diagnosis-header.info { 
+    background: linear-gradient(135deg, #ffc088 60%, #ffcd99 100%);
+    animation: slideInDown 0.9s ease-out;
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.confidence-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    backdrop-filter: blur(10px);
+}
+
+/* Progress Bar */
+.confidence-progress {
+    height: 35px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.confidence-progress .progress-bar {
+    transition: width 2s ease-out;
+    animation: progress-shine 2s ease-in-out infinite;
+}
+
+@keyframes progress-shine {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.diagnosis-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Expandable Sections */
+.expandable-section {
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.expandable-section h5 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.expandable-section ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+/* Solution Items */
+.solution-item {
+    background: white;
+    border-left: 4px solid var(--success-color);
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.75rem;
+    border-radius: 4px;
+}
+
+/* Tools Tags */
+.tool-tag {
+    display: inline-block;
+    background: var(--info-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.875rem;
+    margin: 0.25rem;
+}
+
+/* No Results */
+.no-results {
+    text-align: center;
+    padding: 3rem;
+    color: #6c757d;
+}
+
+.no-results i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+/* Badge Styling */
+.badge {
+    font-weight: 500;
+    padding: 0.5em 0.75em;
+}
+
+/* Button Enhancements */
+.btn {
+    border-radius: 12px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+}
+
+.btn-lg {
+    padding: 1rem 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .symptoms-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .diagnosis-header {
+        text-align: center;
+    }
+    
+    .confidence-badge {
+        position: static;
+        display: inline-block;
+        margin-top: 0.5rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Loading Animation */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.loading-pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Severity Badges */
+.severity-high { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+.severity-medium { background: linear-gradient(135deg, #fee140 0%, #fa709a 100%); }
+.severity-low { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+
+/* Risk Level Colors */
+.risk-high { color: #dc3545; font-weight: bold; }
+.risk-medium { color: #ffc107; font-weight: bold; }
+.risk-low { color: #198754; font-weight: bold; }
+
+/* Smooth Transitions */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* Header dengan gradient orange */
+.bg-primary {
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8555 50%, #ff6b35 100%) !important;
+    animation: gradient-shift 10s ease infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.bg-info {
+    background: linear-gradient(135deg, #ff8555, #ffaa66) !important;
+}
+
+.bg-success {
+    background: linear-gradient(135deg, #ffaa66, #ffb377) !important;
+}
+
+/* Floating animation untuk icons */
+.fa-cogs {
+    animation: rotate-continuous 20s linear infinite;
+}
+
+@keyframes rotate-continuous {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Shimmer effect untuk cards */
+.card {
+    animation: fadeIn 0.5s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 70%
+    );
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+

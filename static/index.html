@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Pakar Identifikasi Kerusakan Mesin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #ff6b35;
+            --primary-dark: #e55a2b;
+            --secondary: #ff9e6d;
+            --text: #2c2c2c;
+            --text-light: #5a5a5a;
+            --background: #1a1a1a;
+            --card-bg: rgba(255, 255, 255, 0.08);
+            --card-border: rgba(255, 255, 255, 0.12);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c1f1a 100%);
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            padding: 30px 0;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 60px 0;
+        }
+        
+        .hero-content {
+            max-width: 650px;
+            z-index: 2;
+            position: relative;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.8);
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4);
+        }
+        
+        /* Glass Cards */
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+            text-align: center;
+            color: var(--primary);
+        }
+        
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            padding: 20px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px auto;
+            background: rgba(255, 107, 53, 0.1);
+            border-radius: 50%;
+            border: 2px solid rgba(255, 107, 53, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(360deg);
+            background: rgba(255, 107, 53, 0.2);
+            border-color: var(--primary);
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        /* Mesin Types */
+        .mesin-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .mesin-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .mesin-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .mesin-icon {
+            font-size: 2.5rem;
+            padding: 20px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px auto;
+            background: rgba(255, 107, 53, 0.1);
+            border-radius: 50%;
+            border: 2px solid rgba(255, 107, 53, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .mesin-card:hover .mesin-icon {
+            transform: scale(1.1) rotate(360deg);
+            background: rgba(255, 107, 53, 0.2);
+            border-color: var(--primary);
+        }
+        
+        /* Inference Engine */
+        .inference-engine {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 40px;
+        }
+        
+        .engine-steps {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 900px;
+            margin-top: 40px;
+            position: relative;
+        }
+        
+        .engine-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            z-index: 1;
+        }
+        
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            z-index: 2;
+            position: relative;
+            width: 20%;
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+        
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 60px;
+        }
+        
+        .credits {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 20px;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .engine-steps {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .engine-steps::before {
+                display: none;
+            }
+            
+            .step {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="#" class="logo">Expert System</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Sistem Pakar Identifikasi Kerusakan Mesin Industri</h1>
+                <p>Menggunakan metode Certainty Factor untuk mendiagnosa kerusakan mesin secara akurat berdasarkan analisis getaran. Solusi praktis untuk predictive maintenance di industri.</p>
+                <a href="landing.html" class="btn">Launch System</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spesifikasi Sistem -->
+    <section id="spesifikasi">
+        <div class="container">
+            <h2 class="section-title">Spesifikasi Sistem Pakar</h2>
+            <div class="features-grid">
+                <div class="feature-card float-animation">
+                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Metode Certainty Factor</h3>
+                    <p>Sistem menggunakan metode Certainty Factor untuk menentukan tingkat keyakinan terhadap suatu kerusakan berdasarkan gejala yang diamati.</p>
+                </div>
+                <div class="feature-card float-animation" style="animation-delay: 0.2s;">
+                    <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Web Based Platform</h3>
+                    <p>Sistem Pakar berbasis Web yang memudahkan operator lapangan dalam melakukan identifikasi kerusakan mesin kapan saja dan di mana saja.</p>
+                </div>
+                <div class="feature-card float-animation" style="animation-delay: 0.4s;">
+                    <div class="feature-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Standar ISO 10816-3</h3>
+                    <p>Mengacu pada standar internasional ISO 10816-3 untuk menentukan batas getaran yang diizinkan pada berbagai jenis mesin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Penjelasan MYCIN -->
+    <section id="mycin">
+        <div class="container">
+            <h2 class="section-title">Metode MYCIN</h2>
+            <div class="glass-card">
+                <p>MYCIN adalah sistem pakar awal yang dikembangkan pada tahun 1970-an di Universitas Stanford untuk mendiagnosis penyakit infeksi bakteri. Sistem ini menggunakan pendekatan reasoning berbasis aturan (rule-based reasoning) dan metode Certainty Factor untuk menangani ketidakpastian dalam diagnosis.</p>
+                <p style="margin-top: 20px;">Dalam konteks sistem pakar identifikasi kerusakan mesin, pendekatan MYCIN diadaptasi dengan:</p>
+                <ul style="margin-top: 15px; padding-left: 20px;">
+                    <li>Basis pengetahuan yang berisi aturan-aturan kerusakan mesin</li>
+                    <li>Fakta-fakta berupa gejala kerusakan yang diamati</li>
+                    <li>Nilai Certainty Factor untuk setiap gejala dan aturan</li>
+                    <li>Inference engine untuk melakukan penalaran</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mesin yang Didiagnosa -->
+    <section id="mesin">
+        <div class="container">
+            <h2 class="section-title">Jenis Mesin yang Dapat Didiagnosa</h2>
+            <div class="mesin-types">
+                <div class="mesin-card">
+                    <div class="mesin-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Mesin Daya < 15 kW</h3>
+                    <p>Integrated driver dan external driver</p>
+                </div>
+                <div class="mesin-card">
+                    <div class="mesin-icon"><i class="fas fa-bolt"></i></div>   
+                    <h3>Mesin 15-300 kW</h3>
+                    <p>Motor dengan kapasitas menengah</p>
+                </div>
+                <div class="mesin-card">
+                    <div class="mesin-icon"><i class="fas fa-industry"></i></div>
+                    <h3>Mesin 300 kW - 50 MW</h3>
+                    <p>Mesin industri berkapasitas besar</p>
+                </div>
+            </div>
+            <div class="glass-card" style="margin-top: 40px;">
+                <h3 style="color: var(--primary); margin-bottom: 15px;">Jenis Kerusakan yang Teridentifikasi</h3>
+                <p>Sistem dapat mengidentifikasi berbagai jenis kerusakan mesin rotasi, termasuk:</p>
+                <ul style="margin-top: 15px; padding-left: 20px; columns: 2;">
+                    <li>Unbalance (Ketidakseimbangan)</li>
+                    <li>Misalignment (Ketidakselarasan)</li>
+                    <li>Kebengkokan Poros</li>
+                    <li>Kelonggaran Mekanis</li>
+                    <li>Kerusakan Bantalan</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inference Engine -->
+    <section id="inference">
+        <div class="container">
+            <h2 class="section-title">Inference Engine</h2>
+            <div class="inference-engine">
+                <div class="glass-card">
+                    <p>Inference engine adalah komponen inti sistem pakar yang melakukan penalaran berdasarkan basis pengetahuan dan fakta yang dimasukkan. Dalam sistem ini, inference engine menggunakan metode forward chaining untuk menarik kesimpulan dari gejala yang diamati.</p>
+                </div>
+                
+                <div class="engine-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h4>Input Data</h4>
+                        <p>Pengguna memasukkan data mesin dan gejala yang diamati</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h4>Analisis Getaran</h4>
+                        <p>Sistem menganalisis level getaran berdasarkan standar ISO 10816-3</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h4>Pencocokan Aturan</h4>
+                        <p>Inference engine mencocokkan gejala dengan aturan dalam basis pengetahuan</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h4>Perhitungan CF</h4>
+                        <p>Menghitung nilai Certainty Factor untuk setiap kemungkinan kerusakan</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <h4>Kesimpulan</h4>
+                        <p>Menampilkan hasil diagnosa dengan tingkat keyakinan tertinggi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="credits">Dikembangkan oleh:</p>
+            <p><strong>Andre Saputra</strong> (System Expert Engineer) & <strong>Nabil Bagus Satrio</strong> (Mechanical Expert Engineer)</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animasi untuk elemen saat scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.feature-card, .mesin-card, .glass-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1197 @@
+{
+  "rules": [
+    {
+      "id": "R1",
+      "if": [
+        "Q2",
+        "Q8"
+      ],
+      "then": "Unbalance",
+      "cf": 0.8,
+      "description": "Getaran dominan radial + puncak 1x RPM"
+    },
+    {
+      "id": "R2",
+      "if": [
+        "Q2",
+        "Q5"
+      ],
+      "then": "Unbalance",
+      "cf": 0.6,
+      "description": "Radial vibration + 3x RPM"
+    },
+    {
+      "id": "R3",
+      "if": [
+        "Q8",
+        "Q14"
+      ],
+      "then": "Unbalance",
+      "cf": 0.7,
+      "description": "1x RPM + phase difference 90°"
+    },
+    {
+      "id": "R4",
+      "if": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q6",
+        "Q7",
+        "Q13"
+      ],
+      "then": "Misalignment",
+      "cf": 0.8,
+      "description": "Complete misalignment symptoms"
+    },
+    {
+      "id": "R5",
+      "if": [
+        "Q1",
+        "Q3",
+        "Q13"
+      ],
+      "then": "Misalignment",
+      "cf": 0.7,
+      "description": "Axial + 2x RPM + 180° phase"
+    },
+    {
+      "id": "R6",
+      "if": [
+        "Q2",
+        "Q3",
+        "Q7"
+      ],
+      "then": "Misalignment",
+      "cf": 0.6,
+      "description": "Radial + 2x RPM dominan"
+    },
+    {
+      "id": "R7",
+      "if": [
+        "Q2",
+        "Q4",
+        "Q9"
+      ],
+      "then": "Mechanical_Looseness",
+      "cf": 0.8,
+      "description": "Radial vibration + sub harmonik + sideband"
+    },
+    {
+      "id": "R8",
+      "if": [
+        "Q4",
+        "Q9",
+        "Q10"
+      ],
+      "then": "Mechanical_Looseness",
+      "cf": 0.7,
+      "description": "Sub harmonic + sideband + random vibration"
+    },
+    {
+      "id": "R9",
+      "if": [
+        "Q2",
+        "Q4"
+      ],
+      "then": "Mechanical_Looseness",
+      "cf": 0.5,
+      "description": "Radial + sub harmonic"
+    },
+    {
+      "id": "R10",
+      "if": [
+        "Q1",
+        "Q3"
+      ],
+      "then": "Bent_Shaft",
+      "cf": 0.8,
+      "description": "Axial vibration + puncak 2x RPM"
+    },
+    {
+      "id": "R11",
+      "if": [
+        "Q1",
+        "Q3",
+        "Q14"
+      ],
+      "then": "Bent_Shaft",
+      "cf": 0.9,
+      "description": "Axial + 2x RPM + 90° phase"
+    },
+    {
+      "id": "R12",
+      "if": [
+        "Q10",
+        "Q11",
+        "Q12"
+      ],
+      "then": "Bearing_Defect",
+      "cf": 0.6,
+      "description": "Random vibration + panas + suara bising"
+    },
+    {
+      "id": "R13",
+      "if": [
+        "Q10",
+        "Q12"
+      ],
+      "then": "Bearing_Defect",
+      "cf": 0.5,
+      "description": "Random vibration + suara bising"
+    },
+    {
+      "id": "R14",
+      "if": [
+        "Q11",
+        "Q12"
+      ],
+      "then": "Bearing_Defect",
+      "cf": 0.4,
+      "description": "Panas + suara bising"
+    },
+    {
+      "id": "R15",
+      "if": [
+        "Q8",
+        "Q10",
+        "Q14"
+      ],
+      "then": "Resonance",
+      "cf": 0.7,
+      "description": "1x RPM + random + 90° phase"
+    },
+    {
+      "id": "R16",
+      "if": [
+        "Q5",
+        "Q8",
+        "Q10"
+      ],
+      "then": "Resonance",
+      "cf": 0.6,
+      "description": "3x RPM + 1x RPM + random vibration"
+    },
+    {
+      "id": "R17",
+      "if": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q9"
+      ],
+      "then": "Coupling_Problem",
+      "cf": 0.7,
+      "description": "Axial + radial + 2x RPM + sideband"
+    },
+    {
+      "id": "R18",
+      "if": [
+        "Q3",
+        "Q9",
+        "Q13"
+      ],
+      "then": "Coupling_Problem",
+      "cf": 0.6,
+      "description": "2x RPM + sideband + 180° phase"
+    },
+    {
+      "id": "R19",
+      "if": [
+        "Q2",
+        "Q4",
+        "Q10"
+      ],
+      "then": "Foundation_Problem",
+      "cf": 0.8,
+      "description": "Radial + sub harmonic + random"
+    },
+    {
+      "id": "R20",
+      "if": [
+        "Q4",
+        "Q9",
+        "Q10",
+        "Q11"
+      ],
+      "then": "Foundation_Problem",
+      "cf": 0.9,
+      "description": "Sub harmonic + sideband + random + heat"
+    },
+    {
+      "id": "R21",
+      "if": [
+        "Q1",
+        "Q8",
+        "Q15"
+      ],
+      "then": "Rotor_Rub",
+      "cf": 0.7,
+      "description": "Axial + 1x RPM + vibration increase at specific speed"
+    },
+    {
+      "id": "R22",
+      "if": [
+        "Q10",
+        "Q16"
+      ],
+      "then": "Rotor_Rub",
+      "cf": 0.6,
+      "description": "Random vibration + subsynchronous vibration"
+    },
+    {
+      "id": "R23",
+      "if": [
+        "Q3",
+        "Q5",
+        "Q17"
+      ],
+      "then": "Gear_Problem",
+      "cf": 0.8,
+      "description": "2x RPM + 3x RPM + gear mesh frequency"
+    },
+    {
+      "id": "R24",
+      "if": [
+        "Q9",
+        "Q18"
+      ],
+      "then": "Gear_Problem",
+      "cf": 0.7,
+      "description": "Sideband + modulation"
+    },
+    {
+      "id": "R25",
+      "if": [
+        "Q1",
+        "Q2",
+        "Q19"
+      ],
+      "then": "Oil_Whirl",
+      "cf": 0.6,
+      "description": "Axial + radial + vibration changes with load"
+    },
+    {
+      "id": "R26",
+      "if": [
+        "Q8",
+        "Q20"
+      ],
+      "then": "Oil_Whirl",
+      "cf": 0.5,
+      "description": "1x RPM + non-synchronous vibration"
+    },
+    {
+      "id": "R27",
+      "if": [
+        "Q10",
+        "Q21"
+      ],
+      "then": "Cavitation",
+      "cf": 0.7,
+      "description": "Random vibration + broadband noise"
+    },
+    {
+      "id": "R28",
+      "if": [
+        "Q12",
+        "Q22"
+      ],
+      "then": "Cavitation",
+      "cf": 0.6,
+      "description": "Suara bising + pressure fluctuation"
+    },
+    {
+      "id": "R29",
+      "if": [
+        "Q1",
+        "Q23"
+      ],
+      "then": "Thrust_Bearing_Failure",
+      "cf": 0.8,
+      "description": "Axial vibration + axial position change"
+    },
+    {
+      "id": "R30",
+      "if": [
+        "Q11",
+        "Q23"
+      ],
+      "then": "Thrust_Bearing_Failure",
+      "cf": 0.7,
+      "description": "Panas + axial position change"
+    },
+    {
+      "id": "R31",
+      "if": [
+        "Q2"
+      ],
+      "then": "Unbalance",
+      "cf": 0.2,
+      "description": "Radial vibration saja"
+    },
+    {
+      "id": "R32",
+      "if": [
+        "Q8"
+      ],
+      "then": "Unbalance",
+      "cf": 0.3,
+      "description": "1x RPM saja"
+    },
+    {
+      "id": "R33",
+      "if": [
+        "Q1"
+      ],
+      "then": "Misalignment",
+      "cf": 0.2,
+      "description": "Axial vibration saja"
+    },
+    {
+      "id": "R34",
+      "if": [
+        "Q3"
+      ],
+      "then": "Misalignment",
+      "cf": 0.4,
+      "description": "2x RPM saja"
+    },
+    {
+      "id": "R35",
+      "if": [
+        "Q1"
+      ],
+      "then": "Bent_Shaft",
+      "cf": 0.2,
+      "description": "Axial vibration"
+    },
+    {
+      "id": "R36",
+      "if": [
+        "Q3"
+      ],
+      "then": "Bent_Shaft",
+      "cf": 0.4,
+      "description": "2x RPM indicator"
+    },
+    {
+      "id": "R37",
+      "if": [
+        "Q4"
+      ],
+      "then": "Mechanical_Looseness",
+      "cf": 0.3,
+      "description": "Sub harmonic"
+    },
+    {
+      "id": "R38",
+      "if": [
+        "Q9"
+      ],
+      "then": "Mechanical_Looseness",
+      "cf": 0.3,
+      "description": "Sideband"
+    },
+    {
+      "id": "R39",
+      "if": [
+        "Q10"
+      ],
+      "then": "Mechanical_Looseness",
+      "cf": 0.2,
+      "description": "Random vibration"
+    },
+    {
+      "id": "R40",
+      "if": [
+        "Q10"
+      ],
+      "then": "Bearing_Defect",
+      "cf": 0.3,
+      "description": "Random vibration indicator"
+    },
+    {
+      "id": "R41",
+      "if": [
+        "Q11"
+      ],
+      "then": "Bearing_Defect",
+      "cf": 0.2,
+      "description": "Panas berlebih"
+    },
+    {
+      "id": "R42",
+      "if": [
+        "Q12"
+      ],
+      "then": "Bearing_Defect",
+      "cf": 0.4,
+      "description": "Suara bising"
+    },
+    {
+      "id": "R43",
+      "if": [
+        "Q13"
+      ],
+      "then": "Misalignment",
+      "cf": 0.3,
+      "description": "180° phase"
+    },
+    {
+      "id": "R44",
+      "if": [
+        "Q14"
+      ],
+      "then": "Unbalance",
+      "cf": 0.3,
+      "description": "90° phase"
+    },
+    {
+      "id": "R45",
+      "if": [
+        "Q2",
+        "Q10"
+      ],
+      "then": "Mechanical_Looseness",
+      "cf": 0.4,
+      "description": "Radial + random"
+    },
+    {
+      "id": "R46",
+      "if": [
+        "Q1",
+        "Q2"
+      ],
+      "then": "Misalignment",
+      "cf": 0.3,
+      "description": "Axial + radial"
+    },
+    {
+      "id": "R47",
+      "if": [
+        "Q8",
+        "Q10"
+      ],
+      "then": "Mechanical_Looseness",
+      "cf": 0.4,
+      "description": "1x RPM + random"
+    },
+    {
+      "id": "R48",
+      "if": [
+        "Q3",
+        "Q8"
+      ],
+      "then": "Misalignment",
+      "cf": 0.5,
+      "description": "2x RPM + 1x RPM"
+    },
+    {
+      "id": "R49",
+      "if": [
+        "Q2",
+        "Q3"
+      ],
+      "then": "Misalignment",
+      "cf": 0.4,
+      "description": "Radial + 2x RPM"
+    },
+    {
+      "id": "R50",
+      "if": [
+        "Q10",
+        "Q11"
+      ],
+      "then": "Bearing_Defect",
+      "cf": 0.4,
+      "description": "Random + panas"
+    },
+    {
+      "id": "R51",
+      "if": [
+        "Q15"
+      ],
+      "then": "Resonance",
+      "cf": 0.5,
+      "description": "Speed-specific vibration"
+    },
+    {
+      "id": "R52",
+      "if": [
+        "Q16"
+      ],
+      "then": "Oil_Whirl",
+      "cf": 0.4,
+      "description": "Subsynchronous"
+    },
+    {
+      "id": "R53",
+      "if": [
+        "Q17"
+      ],
+      "then": "Gear_Problem",
+      "cf": 0.6,
+      "description": "Gear mesh frequency"
+    },
+    {
+      "id": "R54",
+      "if": [
+        "Q18"
+      ],
+      "then": "Gear_Problem",
+      "cf": 0.5,
+      "description": "Modulation"
+    },
+    {
+      "id": "R55",
+      "if": [
+        "Q19"
+      ],
+      "then": "Oil_Whirl",
+      "cf": 0.4,
+      "description": "Load-dependent"
+    },
+    {
+      "id": "R56",
+      "if": [
+        "Q20"
+      ],
+      "then": "Oil_Whirl",
+      "cf": 0.4,
+      "description": "Non-synchronous"
+    },
+    {
+      "id": "R57",
+      "if": [
+        "Q21"
+      ],
+      "then": "Bearing_Defect",
+      "cf": 0.4,
+      "description": "Broadband noise"
+    },
+    {
+      "id": "R58",
+      "if": [
+        "Q22"
+      ],
+      "then": "Cavitation",
+      "cf": 0.5,
+      "description": "Pressure fluctuation"
+    },
+    {
+      "id": "R59",
+      "if": [
+        "Q23"
+      ],
+      "then": "Thrust_Bearing_Failure",
+      "cf": 0.5,
+      "description": "Axial position"
+    },
+    {
+      "id": "R60",
+      "if": [
+        "Q24"
+      ],
+      "then": "Bearing_Defect",
+      "cf": 0.3,
+      "description": "Progressive increase"
+    },
+    {
+      "id": "R61",
+      "if": [
+        "Q25"
+      ],
+      "then": "Mechanical_Looseness",
+      "cf": 0.5,
+      "description": "Impact spikes"
+    },
+    {
+      "id": "R62",
+      "if": [
+        "Q26"
+      ],
+      "then": "Mechanical_Looseness",
+      "cf": 0.4,
+      "description": "High crest factor"
+    },
+    {
+      "id": "R63",
+      "if": [
+        "Q27"
+      ],
+      "then": "Bearing_Defect",
+      "cf": 0.3,
+      "description": "Oil leakage"
+    },
+    {
+      "id": "R64",
+      "if": [
+        "Q28"
+      ],
+      "then": "Bearing_Defect",
+      "cf": 0.3,
+      "description": "Discoloration"
+    },
+    {
+      "id": "R65",
+      "if": [
+        "Q29"
+      ],
+      "then": "Bearing_Defect",
+      "cf": 0.4,
+      "description": "Warmup effect"
+    },
+    {
+      "id": "R66",
+      "if": [
+        "Q30"
+      ],
+      "then": "Bearing_Defect",
+      "cf": 0.3,
+      "description": "Startup only"
+    },
+    {
+      "id": "R31",
+      "if": [
+        "Q2"
+      ],
+      "then": "Unbalance",
+      "cf": 0.2,
+      "description": "Radial vibration saja"
+    },
+    {
+      "id": "R32",
+      "if": [
+        "Q8"
+      ],
+      "then": "Unbalance",
+      "cf": 0.3,
+      "description": "1x RPM saja"
+    },
+    {
+      "id": "R33",
+      "if": [
+        "Q1"
+      ],
+      "then": "Misalignment",
+      "cf": 0.2,
+      "description": "Axial vibration saja"
+    },
+    {
+      "id": "R34",
+      "if": [
+        "Q3"
+      ],
+      "then": "Misalignment",
+      "cf": 0.4,
+      "description": "2x RPM saja"
+    },
+    {
+      "id": "R35",
+      "if": [
+        "Q1"
+      ],
+      "then": "Bent_Shaft",
+      "cf": 0.2,
+      "description": "Axial vibration"
+    },
+    {
+      "id": "R36",
+      "if": [
+        "Q3"
+      ],
+      "then": "Bent_Shaft",
+      "cf": 0.4,
+      "description": "2x RPM indicator"
+    },
+    {
+      "id": "R37",
+      "if": [
+        "Q4"
+      ],
+      "then": "Mechanical_Looseness",
+      "cf": 0.3,
+      "description": "Sub harmonic"
+    },
+    {
+      "id": "R38",
+      "if": [
+        "Q9"
+      ],
+      "then": "Mechanical_Looseness",
+      "cf": 0.3,
+      "description": "Sideband"
+    },
+    {
+      "id": "R39",
+      "if": [
+        "Q10"
+      ],
+      "then": "Mechanical_Looseness",
+      "cf": 0.2,
+      "description": "Random vibration"
+    },
+    {
+      "id": "R40",
+      "if": [
+        "Q10"
+      ],
+      "then": "Bearing_Defect",
+      "cf": 0.3,
+      "description": "Random vibration indicator"
+    },
+    {
+      "id": "R41",
+      "if": [
+        "Q11"
+      ],
+      "then": "Bearing_Defect",
+      "cf": 0.2,
+      "description": "Panas berlebih"
+    },
+    {
+      "id": "R42",
+      "if": [
+        "Q12"
+      ],
+      "then": "Bearing_Defect",
+      "cf": 0.4,
+      "description": "Suara bising"
+    },
+    {
+      "id": "R43",
+      "if": [
+        "Q13"
+      ],
+      "then": "Misalignment",
+      "cf": 0.3,
+      "description": "180° phase"
+    },
+    {
+      "id": "R44",
+      "if": [
+        "Q14"
+      ],
+      "then": "Unbalance",
+      "cf": 0.3,
+      "description": "90° phase"
+    },
+    {
+      "id": "R45",
+      "if": [
+        "Q2",
+        "Q10"
+      ],
+      "then": "Mechanical_Looseness",
+      "cf": 0.4,
+      "description": "Radial + random"
+    },
+    {
+      "id": "R46",
+      "if": [
+        "Q1",
+        "Q2"
+      ],
+      "then": "Misalignment",
+      "cf": 0.3,
+      "description": "Axial + radial"
+    },
+    {
+      "id": "R47",
+      "if": [
+        "Q8",
+        "Q10"
+      ],
+      "then": "Mechanical_Looseness",
+      "cf": 0.4,
+      "description": "1x RPM + random"
+    },
+    {
+      "id": "R48",
+      "if": [
+        "Q3",
+        "Q8"
+      ],
+      "then": "Misalignment",
+      "cf": 0.5,
+      "description": "2x RPM + 1x RPM"
+    },
+    {
+      "id": "R49",
+      "if": [
+        "Q2",
+        "Q3"
+      ],
+      "then": "Misalignment",
+      "cf": 0.4,
+      "description": "Radial + 2x RPM"
+    },
+    {
+      "id": "R50",
+      "if": [
+        "Q10",
+        "Q11"
+      ],
+      "then": "Bearing_Defect",
+      "cf": 0.4,
+      "description": "Random + panas"
+    },
+    {
+      "id": "R51",
+      "if": [
+        "Q15"
+      ],
+      "then": "Resonance",
+      "cf": 0.5,
+      "description": "Speed-specific vibration"
+    },
+    {
+      "id": "R52",
+      "if": [
+        "Q16"
+      ],
+      "then": "Oil_Whirl",
+      "cf": 0.4,
+      "description": "Subsynchronous"
+    },
+    {
+      "id": "R53",
+      "if": [
+        "Q17"
+      ],
+      "then": "Gear_Problem",
+      "cf": 0.6,
+      "description": "Gear mesh frequency"
+    },
+    {
+      "id": "R54",
+      "if": [
+        "Q18"
+      ],
+      "then": "Gear_Problem",
+      "cf": 0.5,
+      "description": "Modulation"
+    },
+    {
+      "id": "R55",
+      "if": [
+        "Q19"
+      ],
+      "then": "Oil_Whirl",
+      "cf": 0.4,
+      "description": "Load-dependent"
+    },
+    {
+      "id": "R56",
+      "if": [
+        "Q20"
+      ],
+      "then": "Oil_Whirl",
+      "cf": 0.4,
+      "description": "Non-synchronous"
+    },
+    {
+      "id": "R57",
+      "if": [
+        "Q21"
+      ],
+      "then": "Bearing_Defect",
+      "cf": 0.4,
+      "description": "Broadband noise"
+    },
+    {
+      "id": "R58",
+      "if": [
+        "Q22"
+      ],
+      "then": "Cavitation",
+      "cf": 0.5,
+      "description": "Pressure fluctuation"
+    },
+    {
+      "id": "R59",
+      "if": [
+        "Q23"
+      ],
+      "then": "Thrust_Bearing_Failure",
+      "cf": 0.5,
+      "description": "Axial position"
+    },
+    {
+      "id": "R60",
+      "if": [
+        "Q24"
+      ],
+      "then": "Bearing_Defect",
+      "cf": 0.3,
+      "description": "Progressive increase"
+    },
+    {
+      "id": "R61",
+      "if": [
+        "Q25"
+      ],
+      "then": "Mechanical_Looseness",
+      "cf": 0.5,
+      "description": "Impact spikes"
+    },
+    {
+      "id": "R62",
+      "if": [
+        "Q26"
+      ],
+      "then": "Mechanical_Looseness",
+      "cf": 0.4,
+      "description": "High crest factor"
+    },
+    {
+      "id": "R63",
+      "if": [
+        "Q27"
+      ],
+      "then": "Bearing_Defect",
+      "cf": 0.3,
+      "description": "Oil leakage"
+    },
+    {
+      "id": "R64",
+      "if": [
+        "Q28"
+      ],
+      "then": "Bearing_Defect",
+      "cf": 0.3,
+      "description": "Discoloration"
+    },
+    {
+      "id": "R65",
+      "if": [
+        "Q29"
+      ],
+      "then": "Bearing_Defect",
+      "cf": 0.4,
+      "description": "Warmup effect"
+    },
+    {
+      "id": "R66",
+      "if": [
+        "Q30"
+      ],
+      "then": "Bearing_Defect",
+      "cf": 0.3,
+      "description": "Startup only"
+    }
+  ],
+  "symptoms": {
+    "Q1": {
+      "code": "Q1",
+      "name": "Getaran dominan di arah aksial",
+      "cf": 0.2,
+      "description": "Getaran lebih kuat pada arah sepanjang poros",
+      "category": "Direction"
+    },
+    "Q2": {
+      "code": "Q2",
+      "name": "Getaran dominan di arah radial",
+      "cf": 0.2,
+      "description": "Getaran lebih kuat pada arah tegak lurus poros",
+      "category": "Direction"
+    },
+    "Q3": {
+      "code": "Q3",
+      "name": "Terdapat puncak di 2x rpm",
+      "cf": 0.8,
+      "description": "Puncak amplitudo pada frekuensi 2x kecepatan putar",
+      "category": "Frequency"
+    },
+    "Q4": {
+      "code": "Q4",
+      "name": "Muncul sub harmonik pada 0.5, 1.5, 2.5x rpm",
+      "cf": 0.8,
+      "description": "Harmonik muncul pada kelipatan 0.5x RPM",
+      "category": "Frequency"
+    },
+    "Q5": {
+      "code": "Q5",
+      "name": "Muncul puncak 3x rpm",
+      "cf": 0.8,
+      "description": "Puncak amplitudo pada 3x kecepatan putar",
+      "category": "Frequency"
+    },
+    "Q6": {
+      "code": "Q6",
+      "name": "Spektrum dominan di 1x rpm saat muncul 3x rpm",
+      "cf": 0.8,
+      "description": "1x RPM dominan ketika ada komponen 3x RPM",
+      "category": "Frequency"
+    },
+    "Q7": {
+      "code": "Q7",
+      "name": "Spektrum dominan di 2x rpm saat muncul 3x rpm",
+      "cf": 0.8,
+      "description": "2x RPM dominan ketika ada komponen 3x RPM",
+      "category": "Frequency"
+    },
+    "Q8": {
+      "code": "Q8",
+      "name": "Terdapat puncak pada 1x rpm",
+      "cf": 0.8,
+      "description": "Puncak amplitudo pada 1x kecepatan putar",
+      "category": "Frequency"
+    },
+    "Q9": {
+      "code": "Q9",
+      "name": "Terdapat sideband pada domain waktu",
+      "cf": 0.6,
+      "description": "Sideband muncul pada analisa time domain",
+      "category": "Modulation"
+    },
+    "Q10": {
+      "code": "Q10",
+      "name": "Terjadi random vibration pada frekuensi tinggi",
+      "cf": 0.4,
+      "description": "Getaran acak pada frekuensi tinggi (> 1000 Hz)",
+      "category": "Frequency"
+    },
+    "Q11": {
+      "code": "Q11",
+      "name": "Panas berlebih pada area bantalan",
+      "cf": 0.2,
+      "description": "Suhu bantalan > 80°C atau 20°C di atas ambient",
+      "category": "Temperature"
+    },
+    "Q12": {
+      "code": "Q12",
+      "name": "Suara bising pada bantalan (> 2gE)",
+      "cf": 0.6,
+      "description": "Kebisingan melebihi 2gE pada area bantalan",
+      "category": "Acoustic"
+    },
+    "Q13": {
+      "code": "Q13",
+      "name": "Terdapat beda fasa ± 180°",
+      "cf": 0.6,
+      "description": "Perbedaan fasa 180 derajat antara probe",
+      "category": "Phase"
+    },
+    "Q14": {
+      "code": "Q14",
+      "name": "Beda fasa ± 90°",
+      "cf": 0.6,
+      "description": "Perbedaan fasa 90 derajat antara probe",
+      "category": "Phase"
+    },
+    "Q15": {
+      "code": "Q15",
+      "name": "Getaran meningkat pada speed tertentu",
+      "cf": 0.7,
+      "description": "Getaran signifikan meningkat pada kecepatan operasi tertentu",
+      "category": "Speed"
+    },
+    "Q16": {
+      "code": "Q16",
+      "name": "Muncul subsynchronous vibration",
+      "cf": 0.6,
+      "description": "Getaran muncul di bawah frekuensi operasi",
+      "category": "Frequency"
+    },
+    "Q17": {
+      "code": "Q17",
+      "name": "Puncak pada gear mesh frequency",
+      "cf": 0.8,
+      "description": "Puncak pada frekuensi gear mesh (jumlah gigi x RPM)",
+      "category": "Frequency"
+    },
+    "Q18": {
+      "code": "Q18",
+      "name": "Modulation pada sideband",
+      "cf": 0.7,
+      "description": "Sideband termodulasi dengan frekuensi tertentu",
+      "category": "Modulation"
+    },
+    "Q19": {
+      "code": "Q19",
+      "name": "Vibration changes dengan load",
+      "cf": 0.6,
+      "description": "Getaran berubah signifikan dengan perubahan beban",
+      "category": "Operation"
+    },
+    "Q20": {
+      "code": "Q20",
+      "name": "Non-synchronous vibration",
+      "cf": 0.7,
+      "description": "Getaran tidak synchronous dengan kecepatan putar",
+      "category": "Frequency"
+    },
+    "Q21": {
+      "code": "Q21",
+      "name": "Broadband high frequency noise",
+      "cf": 0.5,
+      "description": "Noise broadband pada frekuensi tinggi",
+      "category": "Acoustic"
+    },
+    "Q22": {
+      "code": "Q22",
+      "name": "Pressure fluctuation",
+      "cf": 0.6,
+      "description": "Fluktuasi tekanan pada sistem fluida",
+      "category": "Pressure"
+    },
+    "Q23": {
+      "code": "Q23",
+      "name": "Axial position change",
+      "cf": 0.7,
+      "description": "Perubahan posisi aksial rotor",
+      "category": "Position"
+    },
+    "Q24": {
+      "code": "Q24",
+      "name": "Velocity increase over time",
+      "cf": 0.8,
+      "description": "Kecepatan getaran meningkat secara progresif",
+      "category": "Trend"
+    },
+    "Q25": {
+      "code": "Q25",
+      "name": "Impact spikes in time waveform",
+      "cf": 0.7,
+      "description": "Spike impact pada waveform time domain",
+      "category": "Time_Waveform"
+    },
+    "Q26": {
+      "code": "Q26",
+      "name": "High crest factor (> 5)",
+      "cf": 0.6,
+      "description": "Crest factor tinggi menunjukkan impact",
+      "category": "Time_Waveform"
+    },
+    "Q27": {
+      "code": "Q27",
+      "name": "Oil leakage around bearing",
+      "cf": 0.4,
+      "description": "Kebocoran oil di sekitar housing bantalan",
+      "category": "Visual"
+    },
+    "Q28": {
+      "code": "Q28",
+      "name": "Discoloration on bearing housing",
+      "cf": 0.5,
+      "description": "Perubahan warna pada housing bantalan",
+      "category": "Visual"
+    },
+    "Q29": {
+      "code": "Q29",
+      "name": "Vibration decreases after warmup",
+      "cf": 0.6,
+      "description": "Getaran menurun setelah mesin warm up",
+      "category": "Trend"
+    },
+    "Q30": {
+      "code": "Q30",
+      "name": "High vibration at startup only",
+      "cf": 0.5,
+      "description": "Getaran tinggi hanya saat startup",
+      "category": "Operation"
+    }
+  }
+}
