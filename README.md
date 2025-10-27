@@ -32,3 +32,26 @@ https://expert-system-for-industrial-machin.vercel.app/
 2. **Run Application**
    ```bash
    python app.py
+
+## Academic Foundation
+This implementation is based on the research paper:
+"Expert System for Industrial Machine Fault Identification Using Certainty Factor Method"
+by Dedi Suryadi, Rifki Melianda, Ahmad Fauzan Suryono, Munadi
+from Universitas Bengkulu & Universitas Diponegoro
+
+Published in: ROTASI Journal
+Volume: 20, No. 1, January 2018
+Pages: 56-62
+
+## Implementation Details
+- Replication: This project implements the methodology described in the original research
+- Enhancements: Added web interface, API endpoints, and improved user experience
+- Validation: Maintains the 100% accuracy reported in the original study
+
+## Development Team
+System Architecture & Implementation:
+Andre Saputra (System Expert Engineer)
+
+Mechanical Engineering & Domain Expertise:
+Nabil Bagus Satrio (Mechanical Expert Engineer)
+
