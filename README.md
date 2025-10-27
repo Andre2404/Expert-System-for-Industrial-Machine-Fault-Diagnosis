@@ -21,3 +21,11 @@ This expert system application is designed to help industrial technicians diagno
    ```bash
    git clone https://github.com/yourusername/expert-system-machine-fault.git
    cd expert-system-machine-fault
+
+2. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+
+2. **Run Application**
+   ```bash
+   python app.py
